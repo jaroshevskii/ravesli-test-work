@@ -1,32 +1,17 @@
-# Prerequisites
-*.d
+# Test folder
+test/*
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
+# Files built by Visual Studio
+*.ilk
 *.obj
+*.pdb
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+# VS Code files for those working on multiple tools
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
 # Executables
 *.exe
-*.out
-*.app
