@@ -5,6 +5,7 @@ int main() {
                "> ";
   int16_t smaller;
   std::cin >> smaller;
+  std::cout << '\n';
   
   std::cout << "// Enter a larger number.\n"
                "> ";
@@ -13,7 +14,7 @@ int main() {
   std::cout << '\n'; 
   
   if (smaller > larger) {
-    std::cout << "We change the values in places.\n";
+    std::cout << "We change the numbers.\n";
     std::cout << '\n';
     
     int16_t temp = smaller;
