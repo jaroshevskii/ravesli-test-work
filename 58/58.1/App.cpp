@@ -1,7 +1,7 @@
-enum MonsterType {
-  MONSTER_ORGE,
-  MONSTER_GOBLIN,
-  MONSTER_SKELETON,
-  MONSTER_ORC,
-  MONSTER_TROLL
+enum class MonsterType {
+  ORGE,
+  GOBLIN,
+  SKELETON,
+  ORC,
+  TROLL
 };

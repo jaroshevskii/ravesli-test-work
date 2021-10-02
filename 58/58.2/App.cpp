@@ -1,1 +1,1 @@
-MonsterType monsterType(MONSTER_OGRE);
+MonsterType monsterType(MonsterType::OGRE);
