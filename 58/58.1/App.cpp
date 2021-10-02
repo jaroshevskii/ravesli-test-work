@@ -5,5 +5,3 @@ enum MonsterType {
   MONSTER_ORC,
   MONSTER_TROLL
 };
-
-int main() { return 0; }
