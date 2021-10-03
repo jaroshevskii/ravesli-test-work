@@ -16,7 +16,8 @@ int main() {
 
   double livedYears = static_cast<double>(age) / name.length();
 
-  std::cout << "You've lived " << livedYears << " years for each letter in your name.\n";
+  std::cout << "You've lived " << livedYears
+            << " years for each letter in your name.\n";
   std::cout << '\n';
   return 0;
 }
