@@ -10,7 +10,7 @@ int main() {
 
   std::cout << "// Enter your age.\n"
                "> ";
-  uint16_t age;
+  int age;
   std::cin >> age;
   std::cout << '\n';
 
