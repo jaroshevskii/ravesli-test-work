@@ -3,13 +3,13 @@
 int main() {
   std::cout << "// Enter the number.\n"
                "> ";
-  int16_t smaller;
+  int smaller;
   std::cin >> smaller;
   std::cout << '\n';
 
   std::cout << "// Enter a larger number.\n"
                "> ";
-  int16_t larger;
+  int larger;
   std::cin >> larger;
   std::cout << '\n';
 
@@ -17,7 +17,7 @@ int main() {
     std::cout << "We change the numbers.\n";
     std::cout << '\n';
 
-    int16_t temp = smaller;
+    int temp = smaller;
     smaller = larger;
     larger = temp;
   }
