@@ -1,7 +1,7 @@
 #include <iostream>
 
 struct Advertising {
-  uint16_t nViews;                // Кількість переглядів.
+  int nViews;                     // Кількість переглядів.
   double percentOfClicks;         // Відсоток кліків.
   double averageEarningsPerClick; // Середній заробіток за клік.
 };
