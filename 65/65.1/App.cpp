@@ -12,7 +12,7 @@ char getOper() {
     std::cout << "error: The operator is incorrect. Available operators: +, -, "
                  "*, / or %.\n";
     std::cout << '\n';
-    
+
     std::cout << "> ";
   }
 }
