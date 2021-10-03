@@ -5,7 +5,7 @@ enum class MonsterType { ORGE, GOBLIN, SKELETON, ORC, TROLL };
 struct Monster {
   MonsterType type; // Тип
   std::string name; // Ім'я
-  uint16_t health;  // Здоров'я
+  int health;       // Здоров'я
 };
 
 std::string getMonsterType(const MonsterType &monsterType) {
