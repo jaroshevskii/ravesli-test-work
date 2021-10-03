@@ -1,8 +1,8 @@
 #include <iostream>
 
 struct Fraction {
-  int16_t numerator;
-  int16_t denominator;
+  int numerator;
+  int denominator;
 };
 
 void getFraction(Fraction &fraction) {
