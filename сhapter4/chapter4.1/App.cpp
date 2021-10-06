@@ -8,6 +8,7 @@ struct Monster {
   int health;       // Здоров'я
 };
 
+/// Отримати тип монстра.
 std::string getMonsterType(const MonsterType &monsterType) {
   switch (monsterType) {
   case MonsterType::GOBLIN:
@@ -25,6 +26,7 @@ std::string getMonsterType(const MonsterType &monsterType) {
   }
 }
 
+/// Вивести монстра.
 void printMonster(const Monster &monster) {
   std::cout << "Type: " << getMonsterType(monster.type) << "\n"
                "Name: " << monster.name << "\n"
@@ -37,6 +39,6 @@ int main() {
   printMonster(goblin);
 
   Monster orc { MonsterType::ORC, "James", 35 };
-  printMonster(goblin);
+  printMonster(orc);
   return 0;
 }

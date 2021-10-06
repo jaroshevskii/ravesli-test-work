@@ -1,24 +1,29 @@
 #include <iostream>
 
+#include "Get.h"
+
 struct Fraction {
-  int numerator;
-  int denominator;
+  int numerator;   // Знаменник
+  int denominator; // Чисельник
 };
 
+/// Отримати дріб.
 void getFraction(Fraction &fraction) {
   std::cout << "> numerator = ";
-  std::cin >> fraction.numerator;
+  getInt(fraction.numerator);
 
   std::cout << "> denominator = ";
-  std::cin >> fraction.denominator;
+  getInt(fraction.denominator);
   std::cout << '\n';
 }
 
+/// Задати результат множення.
 double setMultiplyResult(const Fraction &value1, const Fraction &value2) {
   return (value1.numerator * value2.numerator) /
          (value1.denominator * value2.denominator);
 }
 
+/// Вивести результат множення.
 void printMultiplyResult(const double &multiplyResult) {
   std::cout << "Multiply result: " << multiplyResult << "\n";
   std::cout << '\n';
@@ -31,7 +36,7 @@ int main() {
   Fraction value2;
   getFraction(value2);
 
-  double multiplyResult = setMultiplyResult(value1, value2);
+  const double multiplyResult = setMultiplyResult(value1, value2);
 
   printMultiplyResult(multiplyResult);
   return 0;
