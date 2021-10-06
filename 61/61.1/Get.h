@@ -3,12 +3,12 @@
 
 #include <iostream>
 
-/// Отримати ціле число
+/// Отримати ціле число.
 void getInt(int &number) {
   std::cin >> number;
 }
 
-/// Отримати десяткове число
+/// Отримати десяткове число.
 void getDouble(double & number) {
   std::cin >> number;
 }

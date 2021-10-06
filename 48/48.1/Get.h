@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-/// Отримати ціле число
+/// Отримати ціле число.
 void getInt(int &number) {
   std::cin >> number;
 }
