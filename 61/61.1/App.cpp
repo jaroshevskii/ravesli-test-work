@@ -3,12 +3,12 @@
 #include "Get.h"
 
 struct Advertising {
-  int nViews;                     // Кількість переглядів.
-  double percentOfClicks;         // Відсоток кліків.
-  double averageEarningsPerClick; // Середній заробіток за клік.
+  int nViews;                     // Кількість переглядів
+  double percentOfClicks;         // Відсоток кліків
+  double averageEarningsPerClick; // Середній заробіток за клік
 };
 
-/// Отримати рекламу
+/// Отримати рекламу.
 void getAdvertising(Advertising &advertising) {
   std::cout << "// Enter the number of views.\n"
                "> ";
@@ -26,7 +26,7 @@ void getAdvertising(Advertising &advertising) {
   std::cout << '\n';
 }
 
-/// Вивести рекламу
+/// Вивести рекламу.
 void printAdvertising(const Advertising &advertising) {
   std::cout << "Number of views: " << advertising.nViews << "\n"
             << "Percent of clicks: " << advertising.percentOfClicks << "\n"
@@ -40,7 +40,7 @@ double setTotalEarnings(const Advertising &advertising) {
          advertising.percentOfClicks;
 }
 
-/// Вивести загальний заробіток
+/// Вивести загальний заробіток.
 void printTotalEarnings(const double &totalEarnings) {
   std::cout << "Total earnings: " << totalEarnings << "$\n";
   std::cout << '\n';

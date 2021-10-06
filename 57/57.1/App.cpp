@@ -3,12 +3,12 @@
 
 #include "Get.h"
 
-/// Задати прожиті роки
+/// Задати прожиті роки.
 double setLivedYears(const std::string &name, const int &age) {
   return static_cast<double>(age) / name.length();
 }
 
-/// Вивести прожиті роки
+/// Вивести прожиті роки.
 void printLivedYears(const double &livedYears) {
   std::cout << "You've lived " << livedYears
             << " years for each letter in your name.\n";
