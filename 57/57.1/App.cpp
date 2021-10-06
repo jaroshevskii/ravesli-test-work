@@ -28,7 +28,7 @@ int main() {
   getInt(age);
   std::cout << '\n';
 
-  double livedYears = setLivedYears(name, age);
+  const double livedYears = setLivedYears(name, age);
   
   printLivedYears(livedYears);
   return 0;
