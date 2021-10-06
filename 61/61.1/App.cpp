@@ -1,28 +1,32 @@
 #include <iostream>
 
+#include "Get.h"
+
 struct Advertising {
   int nViews;                     // Кількість переглядів.
   double percentOfClicks;         // Відсоток кліків.
   double averageEarningsPerClick; // Середній заробіток за клік.
 };
 
+/// Отримати рекламу
 void getAdvertising(Advertising &advertising) {
   std::cout << "// Enter the number of views.\n"
                "> ";
-  std::cin >> advertising.nViews;
+  getInt(advertising.nViews);
   std::cout << '\n';
 
   std::cout << "// Enter the percent of clicks.\n"
                "> ";
-  std::cin >> advertising.percentOfClicks;
+  getDouble(advertising.percentOfClicks);
   std::cout << '\n';
 
   std::cout << "// Enter the average earnings per click.\n"
                "> ";
-  std::cin >> advertising.averageEarningsPerClick;
+  getDouble(advertising.averageEarningsPerClick);
   std::cout << '\n';
 }
 
+/// Вивести рекламу
 void printAdvertising(const Advertising &advertising) {
   std::cout << "Number of views: " << advertising.nViews << "\n"
             << "Percent of clicks: " << advertising.percentOfClicks << "\n"
@@ -31,6 +35,12 @@ void printAdvertising(const Advertising &advertising) {
   std::cout << '\n';
 }
 
+double setTotalEarnings(const Advertising &advertising) {
+  return advertising.nViews * advertising.averageEarningsPerClick / 100 * 
+         advertising.percentOfClicks;
+}
+
+/// Вивести загальний заробіток
 void printTotalEarnings(const double &totalEarnings) {
   std::cout << "Total earnings: " << totalEarnings << "$\n";
   std::cout << '\n';
@@ -42,9 +52,7 @@ int main() {
 
   printAdvertising(advertising);
 
-  double totalEarnings = advertising.nViews *
-                         advertising.averageEarningsPerClick / 100 *
-                         advertising.percentOfClicks;
+  const double totalEarnings = setTotalEarnings(advertising);
 
   printTotalEarnings(totalEarnings);
   return 0;
