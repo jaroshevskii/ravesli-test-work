@@ -3,9 +3,14 @@
 
 #include "Get.h"
 
+struct People {
+  std::string name; // Ім'я
+  int age;          // Вік
+};
+
 /// Задати прожиті роки.
-double setLivedYears(const std::string &name, const int &age) {
-  return static_cast<double>(age) / name.length();
+double setLivedYears(const People &people) {
+  return static_cast<double>(people.age) / people.name.length();
 }
 
 /// Вивести прожиті роки.
@@ -15,20 +20,24 @@ void printLivedYears(const double &livedYears) {
   std::cout << '\n';
 }
 
-int main() {
-  std::cout << "// Enter your full name.\n"
+/// Отримати людину.
+void getPeople(People &people) {
+  std::cout << "// Enter your first and last name in one line.\n"
                "> ";
-  std::string name;
-  std::getline(std::cin, name);
+  std::getline(std::cin, people.name);
   std::cout << '\n';
 
   std::cout << "// Enter your age.\n"
                "> ";
-  int age;
-  getInt(age);
+  getInt(people.age);
   std::cout << '\n';
+}
 
-  const double livedYears = setLivedYears(name, age);
+int main() {
+  People people;
+  getPeople(people);
+
+  const double livedYears = setLivedYears(people);
   
   printLivedYears(livedYears);
   return 0;
