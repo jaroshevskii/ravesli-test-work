@@ -1,6 +1,20 @@
 #include <iostream>
 #include <string>
 
+#include "Get.h"
+
+/// Задати прожиті роки
+double setLivedYears(const std::string &name, const int &age) {
+  return static_cast<double>(age) / name.length();
+}
+
+/// Вивести прожиті роки
+void printLivedYears(const double &livedYears) {
+  std::cout << "You've lived " << livedYears
+            << " years for each letter in your name.\n";
+  std::cout << '\n';
+}
+
 int main() {
   std::cout << "// Enter your full name.\n"
                "> ";
@@ -11,13 +25,11 @@ int main() {
   std::cout << "// Enter your age.\n"
                "> ";
   int age;
-  std::cin >> age;
+  getInt(age);
   std::cout << '\n';
 
-  double livedYears = static_cast<double>(age) / name.length();
-
-  std::cout << "You've lived " << livedYears
-            << " years for each letter in your name.\n";
-  std::cout << '\n';
+  double livedYears = setLivedYears(name, age);
+  
+  printLivedYears(livedYears);
   return 0;
 }
