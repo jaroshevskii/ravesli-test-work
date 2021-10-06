@@ -3,18 +3,18 @@
 #include "Get.h"
 
 int main() {
-  std::cout << "// Enter the number.\n"
+  std::cout << "// Enter the integer.\n"
                "> ";
   int smaller = getInt();
   std::cout << '\n';
 
-  std::cout << "// Enter a larger number.\n"
+  std::cout << "// Enter a larger integer.\n"
                "> ";
   int larger = getInt();
   std::cout << '\n';
 
   if (smaller > larger) {
-    std::cout << "We change the numbers.\n";
+    std::cout << "Change numbers in places.\n";
     std::cout << '\n';
 
     int temp = smaller;
