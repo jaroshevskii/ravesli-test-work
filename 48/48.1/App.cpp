@@ -5,12 +5,14 @@
 int main() {
   std::cout << "// Enter the integer.\n"
                "> ";
-  int smaller = getInt();
+  int smaller;
+  getInt(smaller);
   std::cout << '\n';
 
   std::cout << "// Enter a larger integer.\n"
                "> ";
-  int larger = getInt();
+  int larger;
+  getInt(larger);
   std::cout << '\n';
 
   if (smaller > larger) {
