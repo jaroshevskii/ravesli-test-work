@@ -13,4 +13,4 @@ void getDouble(double & number) {
   std::cin >> number;
 }
 
-#endif
+#endif // GET_H

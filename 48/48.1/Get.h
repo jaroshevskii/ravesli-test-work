@@ -8,4 +8,4 @@ void getInt(int &number) {
   std::cin >> number;
 }
 
-#endif
+#endif // GET_H

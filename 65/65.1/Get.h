@@ -8,27 +8,9 @@ void getInt(int &number) {
   std::cin >> number;
 }
 
-/// Отримати оператор.
-char getChar(char &symbol) {
-  while (true) {
-    std::cin >> symbol;
-
-    switch (symbol) {
-    case '+':
-    case '-':
-    case '*':
-    case '/':
-    case '%':
-      return symbol;
-    }
-
-    std::cout << '\n';
-    std::cout << "ERROR: The symbol is incorrect. Available symbols: +, -, "
-                 "*, / or %.\n";
-    std::cout << '\n';
-
-    std::cout << "> ";
-  }
+/// Отримати символ.
+void getChar(char &symbol) {
+  std::cin >> symbol;
 }
 
-#endif
+#endif // GET_H
