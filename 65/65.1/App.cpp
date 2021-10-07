@@ -2,6 +2,30 @@
 
 #include "Get.h"
 
+/// Отримати оператор.
+void getOper(char &oper) {
+  while (true) {
+    getChar(oper);
+
+    switch (oper) {
+    case '+':
+    case '-':
+    case '*':
+    case '/':
+    case '%':
+      return;
+    }
+
+    std::cout << '\n';
+    std::cout << "ERROR: The operator is incorrect. Available operators: +, -, "
+                 "*, / and %.\n";
+    std::cout << '\n';
+
+    std::cout << "// Repeat again.\n"
+                 "> ";
+  }
+}
+
 /// Задати результат.
 int setResult(const int &value1, const int &value2, const char &oper) {
   switch (oper) {
@@ -40,7 +64,7 @@ int main() {
   std::cout << "// Enter the operator.\n"
                "> ";
   char oper;
-  getChar(oper);
+  getOper(oper);
   std::cout << '\n';
 
   const int result = setResult(value1, value2, oper);
